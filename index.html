@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 3</title>
+</head>
+<body>
+    <div class="main-sections">
+        <aside class="aside-section">
+            <h2 class="altschool">AltSchoolCircle97</h2>
+                     
+             <a class="dashboard">
+                 <i class='bx bxs-dashboard' ></i><span class="dashboard">Dashboard</span>
+             </a>
+             <a href="#" analytics-link>
+                 <i class='bx bxs-doughnut-chart' ></i>
+                 <span class="analytics">Analytics</span>
+             </a>
+             <a href="#" analytics-link>
+                 <i class='bx bxs-book-reader' ></i>
+                 <span class="students">Students</span>
+             </a>
+             <a href="#" analytics-link>
+                 <i class='bx bxs-chalkboard' ></i>
+                 <span class="teachers">Instructors</span>
+             </a>
+             <a href="#" analytics-link>
+                <i class='bx bxs-school' ></i>
+                <span class="teachers">Tracks</span>
+            </a>
+             <a href="#" analytics-link>
+                 <i class='bx bxs-group' ></i>
+                 <span class="team">Team</span>
+             </a>
+             <a href="#" analytics-link>
+                 <i class='bx bxs-cog' ></i>
+                 <span class="setting">Setting</span>
+             </a>
+             <a href="#" analytics-link>
+                 <i class='bx bxs-log-out' ></i>
+                 <span class="logout">Logout</span>
+             </a>
+             
+        </aside>
+        <main>
+            <nav class="nav-items">
+
+                <a class="stack"  href="#">
+                    <i class='bx bx-menu' ></i>
+                    <span>Various Stacks</span>
+                </a>
+                <form action="" class="search-container">
+                  <input 
+                    type="search"
+                    placeholder="Search"
+                    id="searchbar" 
+                    value="" 
+                    >
+                  <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+                </form>
+                 <div class="toggle-wrapper">
+                    <input type="checkbox" id="switch-mode" hidden>
+			        <label for="switch-mode" class="switch-mode"></label>
+                 </div>               
+                <a href="#" class="admin-profile">
+                    <img src="./image.jpg" alt="profile image" class="profile-image">
+                </a>
+            </nav>
+            <section class="all-stacks">
+                <div class="tracks">
+                    <div class="each-stack">
+                        <img src="./frontend.jpg" alt="Front-End Engineering Stack Image" class="stack-image">
+                        <h3 class="main-stack">Front-End Stack</h3>
+                        <p class="react-stack">React</p>
+                        <p class="vue-stack">Vue</p>
+                    </div>
+                </div>
+               
+                <div class="tracks">
+                    <div class="each-stack">
+                        <img src="./backend.png" alt="Backend Engineering Image" class="stack-image" >
+                        <h3 class="main-stack">Back-End Stack</h3>
+                        <p class="python-stack">Python</p>
+                        <p class="ruby-stack">Ruby</p>
+                        <!-- <p class="node-stack">Node.js</p> -->
+                    </div>
+                </div>
+
+                <div class="tracks">
+                    <div class="each-stack">
+                        <img src="./cloud.png" alt="Cloud Engineering Image" class="stack-image">
+                        <h3 class="main-stack">Cloud Engineering</h3>
+                        <p class="react-stack">AWS</p>
+                        <p class="vue-stack">GCP</p>
+                    </div>
+                </div>              
+                
+            </section>
+            <section class="table-section">
+                <div class="table-container" >
+                    <h2 class="instructor">Instructor List</h2>
+                    <table class="table-1">
+                        <thead>
+                            <th>Instructor Id <span onclick="sortTable('table-1', 0)"><i class='bx bx-caret-down-circle bx-tada-hover'></i></span></th>
+                            <th>Name <span onclick="sortTable('table-1', 1)"><i class='bx bx-caret-down-circle bx-tada-hover' ></i></span></th>
+                            <th>Number of Courses <span onclick="sortTable('table-1', 2)"><i class='bx bx-caret-down-circle bx-tada-hover' ></i></span></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Setemi Ojo</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Tabitha Kayvu</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <div class="table-container" >
+                    <h2>Sudent Track</h2>
+                    <table class="table-2">
+                        <thead>
+                            <th>Track</th>
+                            <th>Number of Students <span onclick="sortTable('table-2', 0)"><i class='bx bx-caret-down-circle bx-tada-hover' ></i></span></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Frontend</td>
+                                <td>590</td>
+                            </tr>
+                            <tr>
+                                <td>Backend</td>
+                                <td>470</td>
+                            </tr>
+                            <tr>
+                                <td>Cloud</td>
+                                <td>217</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+                <br>
+                <div class="table-container" >
+                    <h2>Student Gender</h2>
+                    <table class="table-3">
+                        <thead>
+                            <th>Gender</th>
+                            <th>Number of Students <span onclick="sortTable('table-3', 0)"><i class='bx bx-caret-down-circle bx-tada-hover' ></i></span></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Female</td>
+                                <td>1409</td>
+                            </tr>
+                            <tr>
+                                <td>Male</td>
+                                <td>843</td>
+                            </tr>
+                            <tr>
+                                <td>Others</td>
+                                <td>123</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+                <br>
+                <div class="table-container" >
+                    <h2>Student Age</h2>
+                    <table class="table-4">
+                        <thead>
+                            <th>Minimum Age</th>
+                            <th>Maximum Age</th>
+                            <th>Average Age</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td>88</td>
+                                <td>24</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+            </section>
+        </main>
+         <section class="summary-section">
+            <p class="outro">AltSchool97</p>
+            <p class="outro-paragraph">Our growing numbers are a reflection of our efforts. As we strive to train genuis 
+                engineers of the various stack of developers, we do add a touch of excellence at 
+                all stage so together we build solution providers for our everyday problems.
+            </p>
+            <br>
+            <div class="pie" style="--p:20">Cloud 20%</div>
+            <br>
+
+            <div class="pie" style="--p:40;--c:darkblue;--b:10px">Back-End 45%</div>
+            <br>
+            <div class="pie no-round" style="--p:60;--c:rgb(186, 216, 14);--b:15px">Frontend 55%</div>            
+         </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+li {
+	list-style: none;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* height: 100vh; */
+    
+}
+
+/* ----------------------------STYLING THE LEFT SIDEBAR */
+.main-sections{
+    display: flex;
+   
+}
+aside{
+    width: 20%;
+    /* height: 100vh; */
+    color: #fca311;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding:  1rem .2rem;
+    background-color: #081020;
+
+}
+.altschool{
+    margin-bottom: 3rem;
+}
+aside a,
+aside a i{
+    padding: .8rem;
+}
+/* ----------------STYLING THE MAIN SECTION----------- */
+main{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 65%;
+    background-color: #fb8500;
+}
+/* STYLING THE NAV BAR SECTION */
+nav{
+    /* margin: 1em; */
+    padding: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #7209b7;
+    border-radius: 5px;
+}
+.search-container{
+    display: flex;
+    /* margin-right: auto; */
+    justify-content: space-around;
+	align-items: center;
+	height: 36px;
+}
+.search-container input{
+    flex-grow: 1;
+	padding: 0 16px;
+	height: 100%;
+	border: none;
+	background: #fff;
+    color: #fb8500;
+	border-radius: 36px 0 0 36px;
+	outline: none;
+	width: 100%;
+}
+.search-container button{
+    width: 36px;
+    /* padding: 0 16px; */
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #7209b7;
+	color: #fb8500;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 0 36px 36px 0;
+	cursor: pointer;
+}
+.profile-image{
+    width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+/* All the stacks section */
+.all-stacks{
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: .7rem; */
+    align-items: center;
+    justify-content: space-around;
+}
+.tracks{
+    /* display: flex; */
+    border-radius: 20px  8px 40px 0px;
+    background-color: #7209b7;
+    justify-content: space-between;
+    /* padding: .5em 0; */
+    margin: 1rem;
+   
+}
+.each-stack{
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    
+}
+.stack-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+/* Table Section */
+.table-section {
+    display: grid;
+    grid: 1fr 1fr/ 1fr 1fr;
+    row-gap: 5em;
+    
+}
+
+.table-section h2 {
+    text-align: center;
+}
+
+table{       
+    width: 90%;
+    margin: 0 auto;
+    padding: .1em;
+    border: 2px solid #7209b7;
+    border-collapse: collapse;
+   text-align: center;
+}
+
+th,td{
+    padding: .3em;
+    text-align: center;
+    border: 2px solid #7209b7;      
+}
+
+th {
+    background-color: #081020;
+}
+
+
+/* Total Section */
+.summary-section{
+   
+    background-color: #7209b7;
+    width: 15%;
+
+}
+.outro{
+    color: #fca311;
+}
+.outro-paragraph{
+    color: #fff;
+    line-height: 1.3;
+    padding: .5em;
+}
+/* @property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  } */
+  
+  .pie {
+    --p:20;
+    --b:22px;
+    --c:darkred;
+    --w:150px;
+    
+    width:var(--w);
+    aspect-ratio:1;
+    position:relative;
+    display:inline-grid;
+    margin:5px;
+    place-content:center;
+    font-size:25px;
+    font-weight:bold;
+    font-family:sans-serif;
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset:calc(50% - var(--b)/2);
+    background:var(--c);
+    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation:p 1s .5s both;
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }
+  @keyframes p {
+    from{--p:0}
+  }
+  
+  body {
+    background:#ddd;
+  }
+
+@media (max-width:700px) {
+    body{
+        text-align: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .main-sections{
+        display: flex;
+        flex-direction: column;
+    }
+    aside,main,.summary-section{
+        width: 100%;
+    }
+    .aside-section{
+        text-align: center;
+        padding: .2em;
+    }
+    .altschool{
+        font-size: medium;
+        margin: .3em;
+    }
+
+    table{
+        width: 100%;
+       padding: 1em;
+       
+    }
+    .table-1,
+    .instructor{
+        display: none;
+    }
+    .summary-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    
+
+}
